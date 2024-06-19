@@ -56,7 +56,7 @@ button {
 }
 button:hover {
     color: rgb(167, 167, 167)ed;
-    background-color: rgb(248, 195, 255);
+    background-color: rgb(255, 255, 255);
     
 }
 a {
@@ -74,38 +74,40 @@ p {
 
 #treinoa {
     width: auto;
-    height: 0;
-    background-color: rgb(248, 195, 255);
-    transition: height .5s ease;
+    max-height: 0em;
+    background-color: rgb(241, 223, 239);
+    transition: all .5s ease;
 
 }
-#treinoa.fade {
+#treinoa.show {
     
-    height: 10.6em;
+    max-height: 14em;
     
 }
+
 #treinob {
     width: auto;
-    height: 0;
-    background-color: rgb(248, 195, 255);
-    transition: height .5s ease;
+    max-height: 0;
+    background-color: rgb(241, 223, 239);
+    transition: all .5s ease;
 
 }
-#treinob.fade {
+#treinob.show {
     
-    height: 14em;
+    max-height: 14em;
     
 }
+
 #treinoc {
     width: auto;
-    height: 0;
-    background-color: rgb(248, 195, 255);
-    transition: height .5s ease;
+    max-height: 0;
+    background-color: rgb(241, 223, 239);
+    transition: all .5s ease;
 
 }
-#treinoc.fade {
+#treinoc.show {
     
-    height: 16.2em;
+    max-height: 14em;
     
 }
 div {

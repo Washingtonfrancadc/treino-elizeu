@@ -16,6 +16,7 @@ body {
     background-image: url("../treino-elizeu/img/stela.jpeg");
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: 600px;
     max-width: 450px;
     width: 98vw;
     margin: auto;

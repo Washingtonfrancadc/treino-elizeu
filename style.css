@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
+    text-align: center;
+    margin: auto;
     padding: 0;
 }
 h1 {
@@ -19,8 +20,6 @@ body {
     background-size: 600px;
     max-width: 450px;
     width: 98vw;
-    margin: auto;
-    text-align: center;
 }
 
 table { 
@@ -72,47 +71,41 @@ p {
     padding-top: 10px;
 }
 
-
-#treinoa {
-    width: auto;
-    max-height: 0em;
-    background-color: rgb(241, 223, 239);
-    transition: all .5s ease;
-
-}
-#treinoa.show {
-    
-    max-height: 22em;
-    
+iframe.show {
+    display: block;
+    transition: max-height .5s ease;
 }
 
-#treinob {
-    width: auto;
-    max-height: 0;
-    background-color: rgb(241, 223, 239);
-    transition: all .5s ease;
-
-}
-#treinob.show {
-    
-    max-height: 22em;
-    
+#div.hide {
+    display: none;
+    transition: max-height .5s ease;
 }
 
+/* Ajustes para a div do iframe */
+#div {
+    border-radius: 10px;
+    margin: auto auto auto auto;
+    max-width: 360px;
+    height: 360px;
+    transition: max-height .5s ease;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse o container */
+}
+
+/* Estilo das tabelas */
+#treinoa,
+#treinob,
 #treinoc {
     width: auto;
     max-height: 0;
     background-color: rgb(241, 223, 239);
-    transition: all .5s ease;
+    transition: max-height .5s ease;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse o container */
+}
 
-}
+#treinoa.show,
+#treinob.show,
 #treinoc.show {
-    
     max-height: 22em;
-    
-}
-div {
-    overflow: hidden;
 }
 
 p {

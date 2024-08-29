@@ -71,23 +71,27 @@ p {
     padding-top: 10px;
 }
 
-iframe.show {
-    display: block;
-    transition: max-height .5s ease;
+#myIframe {
+    overflow: hidden;
+    border: none;
+    width: 100%;
+    height: 100%;
 }
 
-#div.hide {
-    display: none;
-    transition: max-height .5s ease;
+#div.show {
+    height: 360px;
+    transition: height .5s ease;
+    overflow: hidden;
 }
 
 /* Ajustes para a div do iframe */
 #div {
+    height: 0px;
     border-radius: 10px;
     margin: auto auto auto auto;
     max-width: 360px;
-    height: 360px;
-    transition: max-height .5s ease;
+    /*height: 360px;*/
+    transition: height .5s ease;
     overflow: hidden; /* Garante que o conteúdo não ultrapasse o container */
 }
 

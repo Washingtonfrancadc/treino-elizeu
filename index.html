@@ -133,7 +133,7 @@
         </table>
     </div>
     <div id="div">
-        <iframe id="myIframe" src="" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe id="myIframe" src="" frameborder="0"></iframe>
     </div>
     
     <script>
@@ -144,45 +144,46 @@
             const iframeContainer = document.querySelector('#div'); // Atualizado para corresponder ao ID correto
             const iframe = document.getElementById('myIframe');
 
-            function hideIframe() {
+            function attDiv() {
+                iframeContainer.classList.remove('show');
+
                 iframe.src = '';
+                iframeContainer.classList.add('show');
+
+            }
+
+            function hideIframe() {
+        iframeContainer.classList.remove('show');
             }
 
             function showIframe() {
-                iframeContainer.classList.remove('hide');
+                iframeContainer.classList.add('show');
             }
 
             button1.addEventListener('click', function() {
                 document.querySelector('#treinoa').classList.toggle('show');
                 document.querySelector('#treinob').classList.remove('show');
                 document.querySelector('#treinoc').classList.remove('show');
-                if (document.querySelector('#treinoa').classList.contains('show')) {
-                    showIframe();
-                } else {
                     hideIframe();
-                }
+                
             });
 
             button2.addEventListener('click', function() {
                 document.querySelector('#treinoa').classList.remove('show');
                 document.querySelector('#treinob').classList.toggle('show');
                 document.querySelector('#treinoc').classList.remove('show');
-                if (document.querySelector('#treinob').classList.contains('show')) {
-                    showIframe();
-                } else {
+                
                     hideIframe();
-                }
+                
             });
 
             button3.addEventListener('click', function() {
                 document.querySelector('#treinoa').classList.remove('show');
                 document.querySelector('#treinob').classList.remove('show');
                 document.querySelector('#treinoc').classList.toggle('show');
-                if (document.querySelector('#treinoc').classList.contains('show')) {
-                    showIframe();
-                } else {
+                
                     hideIframe();
-                }
+                
             });
 
             const links = document.querySelectorAll('.link');
@@ -190,8 +191,24 @@
             links.forEach(link => {
                 link.addEventListener('click', (event) => {
                     event.preventDefault();
+                    if (iframeContainer.classList.contains('show')){
+                        hideIframe();
+                    setTimeout(() => {
+                        showIframe();
+                    }, 500);
+                    setTimeout(() => {
                     iframe.src = link.getAttribute('href');
-                    showIframe();
+                    },500);
+                
+                    } else {
+                    hideIframe();
+    //                setTimeout(() => {
+                        showIframe();
+    //                }, 500);
+    //                setTimeout(() => {
+                    iframe.src = link.getAttribute('href');
+    //                },500);
+                    }
                 });
             }); 
         });

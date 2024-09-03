@@ -13,7 +13,7 @@ h1 {
 }
 
 body {
-    color: rgb(87, 0, 107);
+    color: rgb(142, 0, 173);
     background-image: url("../treino-elizeu/img/stela.jpeg");
     background-position: top center;
     background-repeat: no-repeat;
@@ -27,6 +27,8 @@ table {
 
 }
 th, td {
+    
+    color: rgb(142, 0, 173);
     border: 1px solid rgb(0, 0, 0);
     padding-inline: 2px;
     font-size: 0.9em;
@@ -46,8 +48,8 @@ button {
     margin: 5px auto auto auto;
     font-weight: bold;
     width: 98vw;
-    color: rgb(127, 12, 150);
-    background-color: rgb(248, 195, 255);
+    color: rgb(142, 0, 173);
+    background-color: rgba(248, 195, 255, 0.61);
     border: 1px solid rgb(35, 0, 43);
     border-radius: 10px;
     padding-top: 5px;
@@ -55,8 +57,8 @@ button {
        
 }
 button:hover {
-    color: rgb(167, 167, 167)ed;
-    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.61);
     
 }
 a {
@@ -64,7 +66,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: underline;
 }
 p {
@@ -99,9 +101,10 @@ p {
 #treinoa,
 #treinob,
 #treinoc {
+    color: rgb(142, 0, 173);
     width: auto;
     max-height: 0;
-    background-color: rgb(241, 223, 239);
+    background-color: rgba(255, 201, 249, 0.425);
     transition: max-height .5s ease;
     overflow: hidden; /* Garante que o conteúdo não ultrapasse o container */
 }
@@ -113,5 +116,16 @@ p {
 }
 
 p {
-    font-size: 1.3em;
+    color: white;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+#par {
+    border-radius: 5px;
+    width: max-content;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding: 3px;
+    background-color: rgba(255, 0, 0, 0.644);
 }
